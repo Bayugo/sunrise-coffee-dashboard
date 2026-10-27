@@ -9,7 +9,7 @@ The brief: act as a senior commercial analyst reporting to the Chief Commercial 
 3. How is the revenue mix (espresso, filter, food, retail beans) shifting?
 4. How do weekly, holiday and seasonal patterns affect trading?
 
-**Live dashboard:** `https://<your-username>.github.io/<repo-name>/` *(update after enabling GitHub Pages)*
+**Live dashboard:** `https://bayugo.github.io/sunrise-coffee-dashboard/
 
 ![Dashboard overview, light theme](docs/screenshot-light.png)
 
