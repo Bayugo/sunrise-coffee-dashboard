@@ -1,0 +1,35 @@
+/* Base tokens for the standalone build (the hosted dashboard supplied these). */
+:root {
+  color-scheme: light;
+  --font-anthropic-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-anthropic-serif: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-bg: #f6f3ec; --color-panel: #ffffff; --color-fg: #1e1b15; --color-fg-muted: #6a6457; --color-border-line: #e7e1d4;
+  --color-ok: #1f8a4c; --color-warn: #b86a0b; --color-bad: #c8373c;
+  --cds-chart-grid: #eee9de; --cds-chart-axis: #d2cab8; --cds-chart-muted: #d3ccbc; --cds-chart-reference: #9b927e; --cds-chart-status-critical: #e5484d;
+  --cds-surface-popover: #ffffff; --cds-border: #e7e1d4; --cds-text-secondary: #6a6457;
+  --cds-shadow-popover: 0 8px 24px -10px rgba(30, 20, 0, .35);
+  --cds-radius: 10px; --cds-pad-xs: 6px; --cds-pad-sm: 10px; --cds-pad-md: 14px; --cds-pad-lg: 18px;
+  --cds-gap-xs: 6px; --cds-gap-sm: 10px; --cds-gap-md: 14px; --cds-gap-lg: 20px;
+  --cds-font-size-caption: 12.5px; --cds-font-size-body: 14.5px; --cds-font-size-heading: 16px; --cds-font-size-title: 28px;
+  --cds-font-weight-medium: 600; --cds-dur-slow: 420ms; --cds-ease-out: cubic-bezier(.2, .8, .2, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg: #12100c; --color-panel: #221f19; --color-fg: #f3efe6; --color-fg-muted: #a8a193; --color-border-line: #3a352c;
+    --color-ok: #4fd18a; --color-warn: #f2b14c; --color-bad: #ff7b7f;
+    --cds-chart-grid: #2e2a23; --cds-chart-axis: #4a443a; --cds-chart-muted: #4d473c; --cds-chart-reference: #8f8778; --cds-chart-status-critical: #ff6b6f;
+    --cds-surface-popover: #2a261f; --cds-border: #3a352c; --cds-text-secondary: #a8a193;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: 14px; -webkit-font-smoothing: antialiased; }
+#dash-root { padding: 20px max(16px, env(safe-area-inset-right, 0px)) 28px max(16px, env(safe-area-inset-left, 0px)); }
+body:has(.sc[data-sc-theme="dark"]) { background: #12100c; }
+body:has(.sc[data-sc-theme="light"]) { background: #f6f3ec; }
+.dash-skeleton { color: transparent !important; background: color-mix(in srgb, var(--color-fg-muted) 14%, transparent); border-radius: 6px; }
+.sc-chart.dash-skeleton { background: color-mix(in srgb, var(--color-fg-muted) 7%, transparent); border-radius: 12px; }
+.sc-footer { max-width: 86rem; margin: 18px auto 0; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; font-size: 12.5px; color: var(--color-fg-muted); }
+.sc-footer a { color: inherit; }
+[hidden] { display: none !important; }
